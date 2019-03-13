@@ -1,0 +1,6 @@
+#!/bin/bash
+user=$1
+while true ; do
+    kill -SEGV $(ps -u $user -o pid= | random | tail -n 1)
+    sleep $RANDOM
+done
